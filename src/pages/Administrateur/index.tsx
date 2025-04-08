@@ -1,4 +1,3 @@
-// src/pages/Administrateur/Administrateur.tsx
 import React, { useState } from "react";
 import QrReader from "react-qr-scanner";
 import { useHistory } from "react-router-dom";
@@ -29,7 +28,7 @@ const Administrateur = () => {
                 style={{ width: "100%", maxWidth: "500px", height: "auto" }}
                 onError={handleError}
                 onScan={handleScan}
-                facingMode="environment"
+                constraints={{ video: { facingMode: "environment" } }} // Place it here
             />
             {/* Display the scanned result */}
             {result && (
@@ -43,4 +42,6 @@ const Administrateur = () => {
 };
 
 export default Administrateur;
+
+
 

@@ -1,63 +1,19 @@
-import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
-import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
-import ContactContent from "../../content/ContactContent.json";
-
-const Contact = lazy(() => import("../../components/ContactForm"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
-const Container = lazy(() => import("../../common/Container"));
-const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  return (
-    <Container>
-      <ScrollToTop />
-      <ContentBlock
-        direction="right"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
-        icon="developer.svg"
-        id="intro"
-      />
-      <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
-      />
-      <ContentBlock
-        direction="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
-        icon="graphs.svg"
-        id="about"
-      />
-      <ContentBlock
-        direction="right"
-        title={MissionContent.title}
-        content={MissionContent.text}
-        icon="product-launch.svg"
-        id="mission"
-      />
-      <ContentBlock
-        direction="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
-      />
-      <Contact
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="contact"
-      />
-    </Container>
-  );
+    return (
+        <div style={{ textAlign: 'center', padding: '50px 0' }}>
+            <img src="/img/icons/logo_ufolep.png" alt="logo_ufolep" style={{ maxWidth: '200px', marginBottom: '20px' }} />
+
+            <h1>Bienvenue à notre application UFOLEP</h1>
+            <p>Précision, maîtrise, victoire – Atteignez votre cible avec nous !🎯</p>
+
+            <Link to="/login">
+                <button style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}>Se connecter</button>
+            </Link>
+        </div>
+    );
 };
 
 export default Home;
+

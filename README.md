@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![landy](https://user-images.githubusercontent.com/48876996/121569479-e179db80-ca31-11eb-8a48-9c3de9b142f3.gif)
 
 ![Landy React Template License](https://img.shields.io/github/license/Adrinlol/landy-react-template)
@@ -110,3 +111,6 @@ Licensed under the MIT license.
 [Landy]: https://www.npmjs.com/package/cra-template-adrinlol
 [Google Lighthouse]: https://developers.google.com/web/tools/lighthouse
 <!-- prettier-ignore-end -->
+=======
+# UfolepFrontEnd
+>>>>>>> ee4cce3672a50ed647afe75d6b3c83a550bea19a

@@ -35,7 +35,7 @@ const Archer = () => {
                 style={{ width: "100%", maxWidth: "500px", height: "auto" }}
                 onError={handleError}
                 onScan={handleScan}
-                facingMode="environment"
+                constraints={{ video: { facingMode: "environment" } }}  // Use constraints to prefer back camera
             />
 
             {/* Affichage de l'ID extrait */}
@@ -50,5 +50,6 @@ const Archer = () => {
 };
 
 export default Archer;
+
 
 
